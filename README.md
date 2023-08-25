@@ -1,1 +1,1 @@
-<img src="https://repository-images.githubusercontent.com/643705534/5b386bf9-25ea-4137-8740-f99408a0f030">
+<img src="https://cdn.discordapp.com/attachments/814308173547962401/1144770807051071578/Marketing_Plan_Presentation.png">
