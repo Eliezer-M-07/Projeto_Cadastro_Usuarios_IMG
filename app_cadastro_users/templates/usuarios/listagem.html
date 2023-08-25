@@ -1,0 +1,33 @@
+{% extends 'usuarios/menu.html' %}
+{% block conteudo %}
+{% load static %}
+<br>
+<br>
+<br>
+<center>
+    <div class="container">
+        <h2 style="color: white;">Usuários Cadastrados</h2>
+        <br>
+        <table class="table align-middle table-bordered table-dark table-striped">
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>CPF</th>
+                <th>Foto</th>
+                <th>Editar</th>
+                <th>Excluir</th>
+            </tr>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.idade}}</td>
+                <td>{{usuario.cpf}}</td>
+                <td><center><img src="{{ usuario.arq.url }}" alt="Foto do usuário" height="80"></center></td>
+                <td><a href="{% url 'editar' usuario.id %}"><button type="submit" class="btn btn-primary">Editar</button></a></td>
+                <td><a href="{% url 'deletar' usuario.id %}"><button type="submit" class="btn btn-primary">Excluir</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</center>
+{% endblock %}

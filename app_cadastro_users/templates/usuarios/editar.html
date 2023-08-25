@@ -1,0 +1,41 @@
+{% extends 'usuarios/menu.html' %}
+{% block conteudo %}
+{% load static %}
+<br>
+<br>
+<div class="container">
+    <div class="card bg-dark">
+        <img src="{% static 'images/1c.png' %}" width="50">&nbsp;<h4 style="color: white;">&nbsp;&nbsp;Editando usuário: {{usuario.nome}}</h4>
+        <div class="card-body bg-dark text-white">
+            <form action="{% url 'atualizar' usuario.id %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input name="nome" type="text" class="form-control" id="nome" aria-describedby="emailHelp" value="{{usuario.nome}}" required>
+                    <div id="emailHelp" class="form-text">Insira seu e-mail</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="idade" class="form-label">Idade</label>
+                    <input name="idade" type="number" class="form-control" id="idade" aria-describedby="idadeHelp" value="{{usuario.idade}}" required>
+                    <div id="idadeHelp" class="form-text">Insira sua idade</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input name="cpf" type="text" class="form-control" id="cpf" aria-describedby="cpfHelp" value="{{usuario.cpf}}" required>
+                    <div id="cpfHelp" class="form-text">Insira seu CPF</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="arq" class="form-label">Imagem</label>
+                    <input name="arq" type="file" class="form-control" id="arq" aria-describedby="arqHelp" required>
+                    <div id="arqHelp" class="form-text">Envie uma imagem</div>
+                  </div>
+                  <br>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
