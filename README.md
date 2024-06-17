@@ -1,1 +1,1 @@
-<img src="https://cdn.discordapp.com/attachments/814308173547962401/1144770807051071578/Marketing_Plan_Presentation.png">
+<img src="https://github.com/Eliezer-M-07/Projeto_Cadastro_Usuarios_IMG/assets/94458792/f1334210-f884-41be-8b23-49f545e793fe">
